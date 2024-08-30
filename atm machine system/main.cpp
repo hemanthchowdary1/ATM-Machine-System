@@ -20,7 +20,7 @@ int main() {
     cout << "Please enter your card\n\n";
 
     accountBal = readDatabase();
-    cout << setprecision(2) << fixed << "Current Balance: PHP " << accountBal << endl;
+    cout << setprecision(2) << fixed << "Current Balance: INR " << accountBal << endl;
     // Loads amount into accountBal
 
     // Do-while loop to check password input and attempt counter
@@ -64,7 +64,7 @@ int main() {
                         break;
 
                     case 3: // Balance Inquiry
-                        cout << "\nExisting Balance = PHP " << accountBal << endl;
+                        cout << "\nExisting Balance = INR " << accountBal << endl;
                         command = anotherTransaction();
                         break;
 
@@ -126,7 +126,7 @@ double readDatabase() {
         if (!balance.empty()) {
             return balance.back();
         } else {
-            cout << "No previous balance found. Starting with PHP 0." << endl;
+            cout << "No previous balance found. Starting with INR 0." << endl;
             return 0.0;
         }
     } else {
